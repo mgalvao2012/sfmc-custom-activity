@@ -1,0 +1,15 @@
+[data-role="variable-fields"] > .template-variable + .form-inline {
+    margin-top: 0.5em;
+}
+
+[data-role="variable-fields"] > .template-variable [data-role="add"] {
+    display: none;
+}
+
+[data-role="variable-fields"] > .template-variable:last-child [data-role="add"] {
+    display: inline-block;
+}
+
+[data-role="variable-fields"] > .template-variable:last-child [data-role="remove"] {
+    display: none;
+}

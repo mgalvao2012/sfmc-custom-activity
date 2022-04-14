@@ -1,0 +1,14 @@
+{
+    "template": {
+      "nome": "nometemplate",
+      "header": {
+        "type": "video",
+        "body": {
+          "media": "MP4",
+          "url": ""
+        }
+      }
+    },
+    "destino": "",
+    "origem": ""
+  }

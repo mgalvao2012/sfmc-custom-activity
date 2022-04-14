@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WhatsApp Activity</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Enviar notificação de WhatsApp</h3>
+        <form>
+            <div class="form-group">
+                <label for="phoneNumber">Telefone*</label>
+                <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" aria-describedby="phoneNumberHelp" placeholder="Insira valor para número de telefone">
+                <small id="phoneNumberHelp" class="form-text text-muted">Telefone que será disparado, deve começar com +55</small>
+            </div>
+            <div class="form-group">
+                <label for="templateName">Nome do Template*</label>
+                <input type="text" class="form-control" name="templateName" id="templateName" aria-describedby="templateNameHelp" placeholder="Insira o nome do template">
+                <small id="templateNameHelp" class="form-text text-muted">Nome do template aprovado pelo WhatsApp.</small>
+            </div>
+			<div class="form-group">
+				<label for="type">Tipo de template*</label>
+				<select class="form-control form-select" id="typeComunication" onchange="showURL()">
+					<option value="1">Texto</option>
+					<option value="2">Texto + Imagem</option>
+					<option value="3">Texto + Vídeo</option>
+				</select>
+			</div>
+			<div class="form-group" id="divUrl" style="display: none;">
+				<label for="url">URL da Mídia</label>
+				<input type="text" class="form-control" name="url" id="url" aria-describedby="url" placeholder="Insira a URL">
+			</div>
+			<div class="form-group">
+				<label for="origem">Origem*</label>
+				<input type="text" class="form-control" name="origem" id="origem" aria-describedby="origem" placeholder="Sigla da squad para faturamento">
+			</div>
+			<div class="form-group">
+				<label for="linkBotao">Link Botão</label>
+				<input type="text" class="form-control" name="linkBotao" id="linkBotao" aria-describedby="linkBotao" placeholder="Link para CTA">
+			</div>
+            <div class="form-group">
+                <label>Variáveis</label>
+                <div data-role="variable-fields">
+                    <div class="input-group mb-3 template-variable">
+                        <input type="text" name="variable" class="form-control" placeholder="Insira o valor da variável" aria-label="Insira o valor da variável" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-danger" data-role="remove">
+                                -
+                            </button>
+                            <button class="btn btn-primary" data-role="add">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <small class="form-text text-muted">Lembre-se que a ordem das variáveis importa na montagem do template</small>
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="postmonger.js"></script>
+    <script src="customActivity.js"></script>
+</body>
+</html>

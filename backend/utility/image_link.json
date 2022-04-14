@@ -1,0 +1,16 @@
+{
+    "template" : {
+      "nome" : "nometemplate",
+      "header":{
+          "type":"image",
+          "body":{
+              "media":"PNG",
+              "url":"linkURL"
+          }
+      },
+      "buttonURL" : "",
+      "bodyParameters" : []
+    },
+    "origem" : "",
+    "destino" : ""
+}

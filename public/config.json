@@ -1,0 +1,70 @@
+{
+	"key": "979a9f05-f75e-4fcc-935d-8f9fbf10e9c6",
+	"metaData": {
+		"icon": "images/icon.jpg",
+		"category": "message"
+	},
+	"type": "Rest",
+	"lang": {
+		"pt-BR": {
+			"name": "Whatsapp Dev",
+			"description": "Send Messages From Whatsapp"
+		}
+	},
+	"workflowApiVersion": "1.1",
+	"configurationArguments": {
+		"applicationExtensionKey": "979a9f05-f75e-4fcc-935d-8f9fbf10e9c6",
+		"save": {
+			"url": "https://hml-mkt-cloud-activity-server.herokuapp.com/activity/save",
+			"verb": "POST",
+			"body": "",
+			"useJwt": true,
+			"customerKey": "f550aef3-eef3-4e24-aa27-fea52c3372c2"
+		},
+		"publish": {
+			"url": "https://hml-mkt-cloud-activity-server.herokuapp.com/activity/publish",
+			"verb": "POST",
+			"body": "",
+			"useJwt": true,
+			"customerKey": "f550aef3-eef3-4e24-aa27-fea52c3372c2"
+		},
+		"validate": {
+			"url": "https://hml-mkt-cloud-activity-server.herokuapp.com/activity/validate",
+			"verb": "POST",
+			"body": "",
+			"useJwt": true,
+			"customerKey": "f550aef3-eef3-4e24-aa27-fea52c3372c2"
+		}
+	},
+	"userInterfaces": {
+    "configInspector": {
+      "size": "medium"
+    }
+	},
+	"arguments": {
+		"execute": {
+			"inArguments": [{
+          "eventType": "send",
+          "phoneNumber": "{{Contact.Attribute.JourneyEntrySource.PhoneNumber}}",
+          "contactKey": "{{Contact.Key}}",
+          "template": "",
+          "variables": "",
+          "type": "",
+		  "url": "",
+		  "origem": "",
+		  "btnLink": ""
+        }],
+			"outArguments": [],
+			"url": "https://hml-mkt-cloud-activity-server.herokuapp.com/activity/execute",
+			"verb": "POST",
+			"body": "",
+			"header": "",
+			"format": "json",
+			"useJwt": true,
+			"customerKey": "f550aef3-eef3-4e24-aa27-fea52c3372c2",
+			"timeout": 90000,
+			"retryCount": 5,
+			"retryDelay": 100
+		}
+	}
+}

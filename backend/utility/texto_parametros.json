@@ -1,0 +1,9 @@
+{
+    "template":{
+       "nome":"nometemplate",
+       "bodyParameters": [""],
+       "buttonURL":""
+    },
+    "destino":"",
+    "origem":""
+ }

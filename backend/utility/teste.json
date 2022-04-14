@@ -1,0 +1,11 @@
+{
+    "template":{
+       "nome":"cuidado_coordenado_gaps_in_care_v12",
+       "bodyParameters": ["Teste pelo Sensedia"],
+       "buttonURL":"PLCIdentityCheck?srv=a49tf000x008tJmAAI"
+    },
+    "destino":5511951610776,
+    "origem":"Saude_NCC"
+ }
+ 
+ 
