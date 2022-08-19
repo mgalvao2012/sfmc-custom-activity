@@ -36,12 +36,6 @@ function setupVariablesForm() {
   function initActivity(connection, data) {
 	window.activityConfig = data;
 	const inArguments = data.arguments.execute.inArguments;
-	$("#phoneNumber").val(inArguments[0].phoneNumber);
-	$("#templateName").val(inArguments[0].template);
-	$("#typeComunication").val(inArguments[0].type);
-	$("#origem").val(inArguments[0].origem);
-	$("#linkBotao").val(inArguments[0].btnLink);
-	$("#url").val(inArguments[0].url);
 	showURL();
 	const container = $('[data-role="variable-fields"]');
 	const firstElement = container.find('.input-group').first();
@@ -55,52 +49,15 @@ function setupVariablesForm() {
   
   function clickedNext(connection) {
 	const values = $('form').serializeArray();
-	$('#templateName').removeClass('is-invalid');
-	$('#phoneNumber').removeClass('is-invalid');
-  
-	const templateName = values.find(function(el) {
-	  return el.name === 'templateName';
-	});
-	
-	const linkBotao = values.find(function(el){
-		return el.name === 'linkBotao';
-	});
-
-	const origem = values.find(function(el){
-		return el.name === 'origem';
-	});
-	const url = values.find(function(el) {
-		return el.name === 'url';
-	  });
-	
-	const phoneNumber = values.find(function(el) {
-	  return el.name === 'phoneNumber';
-	});
-  
+    
 	const variables = values.filter(function(el) {
 	  return el.name === 'variable' && el.value !== "";
 	})
-  
-	if (!templateName || !templateName.value) {
-	  $('#templateName').addClass('is-invalid');
-	  return false;
-	}
-  
-	if (!phoneNumber || !phoneNumber.value) {
-	  $('#phoneNumber').addClass('is-invalid');
-	  return false;
-	}
   
 	const config = window.activityConfig;
 	config.metaData.isConfigured = true;
   
 	const inArguments = config.arguments.execute.inArguments;
-	inArguments[0].template = templateName.value;
-	inArguments[0].phoneNumber = phoneNumber.value;
-	inArguments[0].type = $( "#typeComunication option:selected" ).val();
-	inArguments[0].url = url.value;
-	inArguments[0].origem = origem.value;
-	inArguments[0].btnLink = linkBotao.value;
 	inArguments[0].variables = variables.map(function(variable) {
 	  return variable.value;
 	}).join('|')
