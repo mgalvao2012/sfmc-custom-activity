@@ -25,10 +25,9 @@ reqWhatsapp = async (data) =>{
             console.log(access_token);
         axios({
             method: "post",
-            url: "https://",
+            url: "https://webhook.site/4eb9a22c-8585-4fec-ab78-f98dda56b780",
             headers: {
                 'Content-Type': 'application/json',
-                'client_id': '857865',
                 'access_token' : access_token
             },
             data: data

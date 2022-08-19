@@ -9,6 +9,7 @@ const memoryCache = cacheManager.caching({store: 'memory', ttl: 3600 /*seconds*/
 
 const getTokenFromExternalAPIManager = async ()  =>{
     try {
+        /*
         const response = await axios({
             method: "post",
             url: "https://",
@@ -18,6 +19,8 @@ const getTokenFromExternalAPIManager = async ()  =>{
             },
         });
         return response.data;
+        */
+       return 'accessToken';
     } catch (err) {
         console.error(err)
     }
