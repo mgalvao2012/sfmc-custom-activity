@@ -42,16 +42,8 @@
 	"arguments": {
 		"execute": {
 			"inArguments": [{
-          "eventType": "send",
-          "phoneNumber": "{{Contact.Attribute.JourneyEntrySource.PhoneNumber}}",
-          "contactKey": "{{Contact.Key}}",
-          "template": "",
-          "variables": "",
-          "type": "",
-		  "url": "",
-		  "origem": "",
-		  "btnLink": ""
-        }],
+				"contactKey": "{{Contact.Key}}"
+			}],
 			"outArguments": [],
 			"url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/execute",
 			"verb": "POST",
