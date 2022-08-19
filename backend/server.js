@@ -57,6 +57,6 @@ app.post(/\/activity\/(save|publish|validate)/, (req, res) => {
 app.use(express.static(Path.join(__dirname, '..', 'public')));
 // Start the server and listen on the port specified by heroku or defaulting to 12345
 app.listen(process.env.PORT || 12345, () => {
-	console.log('Whatsapp Custom Activity is now running!');
+	console.log('Custom Activity is now running!');
 });
 

@@ -9,38 +9,8 @@
 </head>
 <body>
     <div class="container">
-        <h3>Enviar notificação de WhatsApp</h3>
+        <h3>Configuração da Custom Activity</h3>
         <form>
-            <div class="form-group">
-                <label for="phoneNumber">Telefone*</label>
-                <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" aria-describedby="phoneNumberHelp" placeholder="Insira valor para número de telefone">
-                <small id="phoneNumberHelp" class="form-text text-muted">Telefone que será disparado, deve começar com +55</small>
-            </div>
-            <div class="form-group">
-                <label for="templateName">Nome do Template*</label>
-                <input type="text" class="form-control" name="templateName" id="templateName" aria-describedby="templateNameHelp" placeholder="Insira o nome do template">
-                <small id="templateNameHelp" class="form-text text-muted">Nome do template aprovado pelo WhatsApp.</small>
-            </div>
-			<div class="form-group">
-				<label for="type">Tipo de template*</label>
-				<select class="form-control form-select" id="typeComunication" onchange="showURL()">
-					<option value="1">Texto</option>
-					<option value="2">Texto + Imagem</option>
-					<option value="3">Texto + Vídeo</option>
-				</select>
-			</div>
-			<div class="form-group" id="divUrl" style="display: none;">
-				<label for="url">URL da Mídia</label>
-				<input type="text" class="form-control" name="url" id="url" aria-describedby="url" placeholder="Insira a URL">
-			</div>
-			<div class="form-group">
-				<label for="origem">Origem*</label>
-				<input type="text" class="form-control" name="origem" id="origem" aria-describedby="origem" placeholder="Sigla da squad para faturamento">
-			</div>
-			<div class="form-group">
-				<label for="linkBotao">Link Botão</label>
-				<input type="text" class="form-control" name="linkBotao" id="linkBotao" aria-describedby="linkBotao" placeholder="Link para CTA">
-			</div>
             <div class="form-group">
                 <label>Variáveis</label>
                 <div data-role="variable-fields">
@@ -56,7 +26,6 @@
                         </div>
                     </div>
                 </div>
-                <small class="form-text text-muted">Lembre-se que a ordem das variáveis importa na montagem do template</small>
             </div>
         </form>
     </div>
