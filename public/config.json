@@ -16,19 +16,22 @@
 			"url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/save",
 			"verb": "POST",
 			"body": "",
-			"useJwt": true
+			"useJwt": true,
+			"customerKey": "jb-custom-activity"
 		},
 		"publish": {
 			"url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/publish",
 			"verb": "POST",
 			"body": "",
-			"useJwt": true
+			"useJwt": true,
+			"customerKey": "jb-custom-activity"
 		},
 		"validate": {
 			"url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/validate",
 			"verb": "POST",
 			"body": "",
-			"useJwt": true
+			"useJwt": true,
+			"customerKey": "jb-custom-activity"
 		}
 	},
 	"userInterfaces": {
@@ -56,7 +59,7 @@
 			"header": "",
 			"format": "json",
 			"useJwt": true,
-			"customerKey": "f550aef3-eef3-4e24-aa27-fea52c3372c2",
+			"customerKey": "jb-custom-activity",
 			"timeout": 90000,
 			"retryCount": 5,
 			"retryDelay": 100
