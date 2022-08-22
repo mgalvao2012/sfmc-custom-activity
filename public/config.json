@@ -1,5 +1,4 @@
 {
-	//"key": "e4197234-dde8-4bd8-98e0-fa5b32840102",
 	"workflowApiVersion": "1.1",
 	"metaData": {
 		"icon": "images/icon.jpg",
@@ -13,7 +12,6 @@
 		}
 	},
 	"configurationArguments": {
-		//"applicationExtensionKey": "e4197234-dde8-4bd8-98e0-fa5b32840102",
 		"save": {
 			"url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/save",
 			"verb": "POST",
