@@ -53,7 +53,7 @@
 			"header": "",
 			"format": "json",
 			"useJwt": true,
-			"customerKey": "jb-custom-activity",
+			"customerKey": "MMmF4M_GpPO_u5QFOoYdI7Ws9pLZK5fMkU1pBVk0CHsp-EohQSF3flo8CXKjTi-iW9Ys2Y8QhWuajYA-QYaaneFOMrNEZBYCjVL-UTT7XTuX8jzSrHS_xo5NUZJ8nW9dj1i2-NgA13mqCeb9tPth5a_lrAFacXj6JQEMrQ_INTmOdzF_pl7eRD7AJVWR7FbI630UQISt6Pz3MyLFEbNtmTzVuY3_V3WU-aCi56SDt1AoS456094oiJJrHNdBbg2",
 			"timeout": 90000,
 			"retryCount": 5,
 			"retryDelay": 100
