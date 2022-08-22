@@ -1,4 +1,5 @@
 {
+	"key": "e4197234-dde8-4bd8-98e0-fa5b32840102",
 	"workflowApiVersion": "1.1",
 	"metaData": {
 		"icon": "images/icon.jpg",
@@ -12,23 +13,27 @@
 		}
 	},
 	"configurationArguments": {
+		"applicationExtensionKey": "e4197234-dde8-4bd8-98e0-fa5b32840102",
 		"save": {
 			"url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/save",
 			"verb": "POST",
 			"body": "",
-			"useJwt": true
+			"useJwt": true,
+			"customerKey": "jb-custom-activity"
 		},
 		"publish": {
 			"url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/publish",
 			"verb": "POST",
 			"body": "",
-			"useJwt": true
+			"useJwt": true,
+			"customerKey": "jb-custom-activity"
 		},
 		"validate": {
 			"url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/validate",
 			"verb": "POST",
 			"body": "",
-			"useJwt": true
+			"useJwt": true,
+			"customerKey": "jb-custom-activity"
 		}
 	},
 	"userInterfaces": {
@@ -48,6 +53,7 @@
 			"header": "",
 			"format": "json",
 			"useJwt": true,
+			"customerKey": "jb-custom-activity",
 			"timeout": 90000,
 			"retryCount": 5,
 			"retryDelay": 100
