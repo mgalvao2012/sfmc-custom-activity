@@ -4,7 +4,7 @@
 		"icon": "images/icon.jpg",
 		"category": "message"
 	},
-	"type": "Rest",
+	"type": "REST",
 	"lang": {
 		"pt-BR": {
 			"name": "Custom Activity",
@@ -16,22 +16,19 @@
 			"url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/save",
 			"verb": "POST",
 			"body": "",
-			"useJwt": true,
-			"customerKey": "jb-custom-activity"
+			"useJwt": true
 		},
 		"publish": {
 			"url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/publish",
 			"verb": "POST",
 			"body": "",
-			"useJwt": true,
-			"customerKey": "jb-custom-activity"
+			"useJwt": true
 		},
 		"validate": {
 			"url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/validate",
 			"verb": "POST",
 			"body": "",
-			"useJwt": true,
-			"customerKey": "jb-custom-activity"
+			"useJwt": true
 		}
 	},
 	"userInterfaces": {
@@ -51,7 +48,6 @@
 			"header": "",
 			"format": "json",
 			"useJwt": true,
-			"customerKey": "jb-custom-activity",
 			"timeout": 90000,
 			"retryCount": 5,
 			"retryDelay": 100
