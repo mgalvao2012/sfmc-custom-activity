@@ -41,9 +41,7 @@
 	},
 	"arguments": {
 		"execute": {
-			"inArguments": [{
-				"contactKey": "{{Contact.Key}}"
-			}],
+			"inArguments": [],
 			"outArguments": [],
 			"url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/execute",
 			"verb": "POST",
@@ -55,6 +53,20 @@
 			"timeout": 90000,
 			"retryCount": 5,
 			"retryDelay": 100
+		}
+	},
+	"schema": {
+		"arguments": {
+		  "execute": {
+			"inArguments": [],
+			"outArguments": [{
+			  "numeroCartao": {
+				"dataType": "Text",
+				"direction": "out",
+				"access": "visible"
+			  }
+			}]
+		  }
 		}
 	}
 }
