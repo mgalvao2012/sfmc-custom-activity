@@ -8,7 +8,7 @@ exports.populaMensagem = async (req) => {
 texto = (data) =>{
     let inArguments = data['inArguments'][0];
     var obj = {
-        "bodyParameters": [inArguments.variables],
+        "bodyParameters": [inArguments.variables]
      }
      return obj;
 }
