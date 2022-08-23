@@ -27,11 +27,13 @@ app.post('/activity/execute', (req, res) => {
 		if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
 			console.log("Requisição JB")
 			console.log(decoded);
+			/*
 			setTimeout(function(){ 
 				console.log("Ready")
 			}, 1000);
+			*/
 			helper.populaMensagem(decoded).then( (value) =>{
-				console.log("saiu do popular Mensagem")
+				console.log("retorno da API externa")
 				console.log(value)
 			});
 			return res.status(200).end();

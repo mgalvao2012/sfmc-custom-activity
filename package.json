@@ -1,7 +1,7 @@
 {
-	"name": "whatsapp-dev",
-	"version": "0.0.2",
-	"description": "Custom Activity Whatsapp",
+	"name": "jb-custom-activity",
+	"version": "1.0.0",
+	"description": "Journey Builder Custom Activity",
 	"main": "backend/server.js",
 	"scripts": {
 		"start": "node backend/server.js"
