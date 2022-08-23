@@ -3,7 +3,8 @@ const axios = require('axios')
 
 exports.populaMensagem = async (req) => {
     var jsonPopulado = texto(req);
-    return await reqWhatsapp(jsonPopulado);
+    var retorno = await reqWhatsapp(jsonPopulado);
+    return retorno;
 }
 texto = (data) =>{
     let inArguments = data['inArguments'][0];
@@ -24,7 +25,7 @@ texto = (data) =>{
 }
 
 reqWhatsapp = async (data) =>{
-    return token.getAccessToken().then( (access_token) => {
+    //return token.getAccessToken().then( (access_token) => {
         console.log("data:");
         console.log(data.bodyParameters[0]);
             /*
@@ -35,7 +36,7 @@ reqWhatsapp = async (data) =>{
             },
             data: data
             */
-            axios({
+        axios({
             method: "get",
             url: `https://nodejs-express-mysql-mgalvao.herokuapp.com/customers/${data.bodyParameters[0]}`,
         }).then(resp =>{            
@@ -44,5 +45,5 @@ reqWhatsapp = async (data) =>{
         }).catch(error =>{
             console.error( error );
         });   
-    });
+    //});
 }
