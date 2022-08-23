@@ -27,8 +27,8 @@ reqWhatsapp = async (data) =>{
             method: "post",
             url: "https://webhook.site/4eb9a22c-8585-4fec-ab78-f98dda56b780",
             headers: {
-                'Content-Type': 'application/json',
-                'access_token' : access_token
+                'Content-Type': 'application/json'
+                /* 'access_token' : access_token */
             },
             data: data
         }).then(resp =>{
