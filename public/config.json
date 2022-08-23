@@ -54,19 +54,5 @@
 			"retryCount": 5,
 			"retryDelay": 100
 		}
-	},
-	"schema": {
-		"arguments": {
-		  "execute": {
-			"inArguments": [],
-			"outArguments": [{
-			  "numeroCartao": {
-				"dataType": "Text",
-				"direction": "out",
-				"access": "visible"
-			  }
-			}]
-		  }
-		}
 	}
 }
