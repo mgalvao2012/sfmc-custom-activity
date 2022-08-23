@@ -41,7 +41,9 @@
 	},
 	"arguments": {
 		"execute": {
-			"inArguments": [],
+			"inArguments": [{
+				"contactKey": "{{Contact.Key}}"
+			}],
 			"outArguments": [],
 			"url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/execute",
 			"verb": "POST",
