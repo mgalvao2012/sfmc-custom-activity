@@ -4,6 +4,7 @@ const axios = require('axios')
 exports.populaMensagem = async (req) => {
     var jsonPopulado = texto(req);
     var retorno = await reqWhatsapp(jsonPopulado);
+    console.log("retorno ",retorno);
     return retorno;
 }
 texto = (data) =>{
