@@ -30,11 +30,24 @@ app.post('/activity/execute', (req, res) => {
 			/*
 			setTimeout(function(){ 
 				console.log("Ready")
-			}, 1000);
-			*/
+			}, 1000);	
 			helper.populaMensagem(decoded).then( resp =>{
 				console.log("retorno da API externa")
 				console.log(resp.data)
+			});
+			*/
+			let inArguments = decoded['inArguments'][0];
+			var obj = {
+				"bodyParameters": [inArguments.variables]
+			}
+			axios({
+				method: "get",
+				url: `https://nodejs-express-mysql-mgalvao.herokuapp.com/customers/${obj.bodyParameters[0]}`,
+			}).then(resp =>{   
+				console.log("retorno da API externa")         
+				console.log(resp.data);
+			}).catch(error =>{
+				console.error( error );
 			});
 			return res.status(200).end();
 		} else {
