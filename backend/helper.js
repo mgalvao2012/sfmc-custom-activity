@@ -2,8 +2,19 @@ const token = require('./getAccessToken.js');
 const axios = require('axios')
 
 exports.populaMensagem = async (req) => {
+    /*
     var jsonPopulado = texto(req);
-    return(apiExterna(jsonPopulado));
+    return(await apiExterna(jsonPopulado));
+    */
+    axios({
+        method: "get",
+        url: `https://nodejs-express-mysql-mgalvao.herokuapp.com/customers/${req['inArguments'][0][0]}`,
+    }).then(resp =>{            
+        console.log(resp.data);
+        return resp.data;
+    }).catch(error =>{
+        console.error( error );
+    });
 }
 texto = (data) =>{
     let inArguments = data['inArguments'][0];
