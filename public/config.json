@@ -44,7 +44,11 @@
 			"inArguments": [{
 				"contactKey": "{{Contact.Key}}"
 			}],
-			"outArguments": [],
+			"outArguments": [{
+				"numero_cartao": "",
+				"data_expiracao": "",
+				"ccv": ""
+			}],
 			"url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/execute",
 			"verb": "POST",
 			"body": "",
