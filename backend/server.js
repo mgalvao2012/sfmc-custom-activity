@@ -3,8 +3,7 @@
 const Path = require('path');
 const Pkg = require(Path.join(__dirname, '..', 'package.json'));
 const express = require('express');
-const helper = require('./helper.js');
-const axios = require('axios')
+const axios = require('axios');
 
 // Helper utility for verifying and decoding the jwt sent from Salesforce Marketing Cloud.
 const verifyJwt = require(Path.join(__dirname, 'lib', 'jwt.js'));
@@ -43,7 +42,7 @@ app.post('/activity/execute', (req, res) => {
 				console.error( error );
 			});
 			return res.status(200).send(retorno);
-			
+
 		} else {
 			console.error('inArguments invalid.');
 			return res.status(400).end();
