@@ -41,16 +41,18 @@ app.post('/activity/execute', (req, res) => {
 			var obj = {
 				"bodyParameters": [inArguments.variables]
 			}
+			var retorno
 			axios({
 				method: "get",
 				url: `https://nodejs-express-mysql-mgalvao.herokuapp.com/customers/${obj.bodyParameters[0]}`,
 			}).then(resp =>{   
-				console.log("retorno da API externa")         
-				console.log(resp.data);
+				console.log("retorno da API externa") 
+				retorno = resp.data;       
+				console.log(retorno);
 			}).catch(error =>{
 				console.error( error );
 			});
-			return res.status(200).end();
+			return res.status(200).send(retorno);
 		} else {
 			console.error('inArguments invalid.');
 			return res.status(400).end();
