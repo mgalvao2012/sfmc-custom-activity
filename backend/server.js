@@ -28,23 +28,13 @@ app.post('/activity/execute', (req, res) => {
 		if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
 			console.log("Requisição JB")
 			console.log(decoded);
-			/*
-			setTimeout(function(){ 
-				console.log("Ready")
-			}, 1000);	
-			helper.populaMensagem(decoded).then( resp =>{
-				console.log("retorno da API externa")
-				console.log(resp.data)
-			});
-			*/
+
 			let inArguments = decoded['inArguments'][0];
-			var obj = {
-				"bodyParameters": [inArguments.variables]
-			}
-			var retorno
+			var variables = [inArguments.variables];
+			var retorno = '';
 			axios({
 				method: "get",
-				url: `https://nodejs-express-mysql-mgalvao.herokuapp.com/customers/${obj.bodyParameters[0]}`,
+				url: `https://nodejs-express-mysql-mgalvao.herokuapp.com/customers/${variables[0]}`,
 			}).then(resp =>{   
 				console.log("retorno da API externa") 
 				retorno = resp.data;       
@@ -53,6 +43,7 @@ app.post('/activity/execute', (req, res) => {
 				console.error( error );
 			});
 			return res.status(200).send(retorno);
+			
 		} else {
 			console.error('inArguments invalid.');
 			return res.status(400).end();
