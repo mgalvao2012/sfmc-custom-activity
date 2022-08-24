@@ -32,9 +32,9 @@ app.post('/activity/execute', (req, res) => {
 				console.log("Ready")
 			}, 1000);
 			*/
-			helper.populaMensagem(decoded).then( (value) =>{
+			helper.populaMensagem(decoded).then( resp =>{
 				console.log("retorno da API externa")
-				console.log(value)
+				console.log(resp.data)
 			});
 			return res.status(200).end();
 		} else {
