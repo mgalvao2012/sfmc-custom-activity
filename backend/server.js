@@ -30,7 +30,7 @@ app.post('/activity/execute', (req, res) => {
 
 			let inArguments = decoded['inArguments'][0];
 			var variables = [inArguments.variables];
-			var retorno = '';
+			var retorno;
 			axios({
 				method: "get",
 				url: `https://nodejs-express-mysql-mgalvao.herokuapp.com/customers/${variables[0]}`,
