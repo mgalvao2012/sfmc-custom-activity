@@ -1,64 +1,102 @@
 {
-	"workflowApiVersion": "1.1",
-	"metaData": {
-		"icon": "images/icon.jpg",
-		"category": "message"
-	},
-	"type": "REST",
-	"lang": {
-		"pt-BR": {
-			"name": "Custom Activity",
-			"description": "Custom Activity - get external information"
-		}
-	},
-	"configurationArguments": {
-		"save": {
-			"url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/save",
-			"verb": "POST",
-			"body": "",
-			"useJwt": true,
-			"customerKey": "jb-custom-activity"
-		},
-		"publish": {
-			"url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/publish",
-			"verb": "POST",
-			"body": "",
-			"useJwt": true,
-			"customerKey": "jb-custom-activity"
-		},
-		"validate": {
-			"url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/validate",
-			"verb": "POST",
-			"body": "",
-			"useJwt": true,
-			"customerKey": "jb-custom-activity"
-		}
-	},
-	"userInterfaces": {
-		"configInspector": {
-			"size": "medium"
-		}
-	},
-	"arguments": {
-		"execute": {
-			"inArguments": [{
-				"contactKey": "{{Contact.Key}}"
-			}],
-			"outArguments": [{
-				"numero_cartao": "",
-				"data_expiracao": "",
-				"ccv": ""
-			}],
-			"url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/execute",
-			"verb": "POST",
-			"body": "",
-			"header": "",
-			"format": "json",
-			"useJwt": true,
-			"customerKey": "jb-custom-activity",
-			"timeout": 90000,
-			"retryCount": 5,
-			"retryDelay": 100
-		}
-	}
+  "workflowApiVersion": "1.1",
+  "metaData": {
+    "icon": "images/icon.jpg",
+    "category": "message"
+  },
+  "type": "REST",
+  "lang": {
+    "pt-BR": {
+      "name": "Custom Activity",
+      "description": "Custom Activity - get external information"
+    }
+  },
+  "configurationArguments": {
+    "save": {
+      "url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/save",
+      "verb": "POST",
+      "body": "",
+      "useJwt": true,
+      "customerKey": "jb-custom-activity"
+    },
+    "publish": {
+      "url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/publish",
+      "verb": "POST",
+      "body": "",
+      "useJwt": true,
+      "customerKey": "jb-custom-activity"
+    },
+    "validate": {
+      "url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/validate",
+      "verb": "POST",
+      "body": "",
+      "useJwt": true,
+      "customerKey": "jb-custom-activity"
+    }
+  },
+  "userInterfaces": {
+    "configInspector": {
+      "size": "medium"
+    }
+  },
+  "arguments": {
+    "execute": {
+      "inArguments": [
+        {
+          "contactKey": "{{Contact.Key}}"
+        }
+      ],
+      "outArguments": [
+        {
+          "numero_cartao": "",
+          "data_expiracao": "",
+          "ccv": ""
+        }
+      ],
+      "url": "https://mgalvao-sfmc-custom-activity.herokuapp.com/activity/execute",
+      "verb": "POST",
+      "body": "",
+      "header": "",
+      "format": "json",
+      "useJwt": true,
+      "customerKey": "jb-custom-activity",
+      "timeout": 90000,
+      "retryCount": 5,
+      "retryDelay": 100
+    }
+  },
+  "schema": {
+    "arguments": {
+      "execute": {
+        "inArguments": [
+          {
+            "contactKey": {
+              "dataType": "Text",
+              "isNullable": false,
+              "direction": "in"
+            }
+          }
+        ],
+        "outArguments": [
+          {
+            "numero_cartao": {
+              "dataType": "Text",
+              "direction": "out",
+              "access": "visible"
+            },
+            "data_expiracao": {
+              "dataType": "Text",
+              "direction": "out",
+              "access": "visible"
+            },
+            "cvv": {
+              "dataType": "Text",
+              "direction": "out",
+              "access": "visible"
+            }
+          }
+        ]
+      }
+    }
+  }
 }
