@@ -4,6 +4,7 @@ const Path = require('path');
 const Pkg = require(Path.join(__dirname, '..', 'package.json'));
 const express = require('express');
 const helper = require('./helper.js');
+const axios = require('axios')
 
 // Helper utility for verifying and decoding the jwt sent from Salesforce Marketing Cloud.
 const verifyJwt = require(Path.join(__dirname, 'lib', 'jwt.js'));
