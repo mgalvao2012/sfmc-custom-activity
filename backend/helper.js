@@ -7,9 +7,12 @@ exports.populaMensagem = async (req) => {
     return(await apiExterna(jsonPopulado));
     */
     let inArguments = req['inArguments'][0];
+    var obj = {
+        "bodyParameters": [inArguments.variables]
+    }
     axios({
         method: "get",
-        url: `https://nodejs-express-mysql-mgalvao.herokuapp.com/customers/${inArguments.variables[0]}`,
+        url: `https://nodejs-express-mysql-mgalvao.herokuapp.com/customers/${obj.bodyParameters[0]}`,
     }).then(resp =>{            
         console.log(resp.data);
         return resp.data;
